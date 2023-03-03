@@ -1,0 +1,71 @@
+all {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.5s;
+}
+
+h1 {
+    text-align: center;
+}
+
+.allgallery {
+    width: 500px;
+    margin: 5px auto;
+    text-align: center;
+}
+
+li {
+    width: 100px;
+    height: 60px;
+    display: inline-block;
+    margin: 3px;
+    border-radius: 5px;
+    overflow: hidden;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+li:hover {
+    opacity: 1;
+}
+
+li img {
+    width: 100%;
+    height: 100%;
+}
+
+.sabika {
+    border: 2px solid rgb(115, 153, 219);
+}
+
+.nature {
+    border: 2px solid rgb(224, 97, 97);
+}
+
+picBox {
+    width: 500px;
+    height: 350px;
+    border: 1px dotted green;
+    border-radius: 10px;
+    margin: 10px auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.picBox img {
+    width: 100%;
+    height: 100%;
+}
+
+.picInfo {
+    width: 150px;
+    min-height: 30px;
+    background-color: #fffc;
+    position: absolute;
+    right: 0;
+    top: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}

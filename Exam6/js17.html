@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 17 - Gallery with Info</title>
+    <link rel="icon" href="data:;base64,=">
+    <link rel="stylesheet" href="css/raz.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: all 0.5s;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        #pics {
+            width: 500px;
+            margin: 10px auto;
+            text-align: center;
+        }
+        
+        #pics li {
+            width: 100px;
+            height: 60px;
+            display: inline-block;
+            margin: 3px;
+            border-radius: 10px;
+            overflow: hidden;
+            opacity: 0.7;
+            cursor: pointer;
+        }
+        
+        #pics li:hover {
+            opacity: 1;
+            cursor: pointer;
+            transform: scale(1.2);
+        }
+        
+        #pics li img {
+            width: 100%;
+            height: 100%;
+            transition: all 0.5s;
+        }
+        
+        #pics .digi {
+            border: 3px solid red;
+        }
+        
+        #pics .food {}
+        
+        #picBox {
+            width: 500px;
+            height: 350px;
+            border: 1px dotted green;
+            border-radius: 10px;
+            margin: 10px auto;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        #picBox img {
+            width: 100%;
+            height: 100%;
+        }
+        
+        #picInfo {
+            width: 150px;
+            min-height: 30px;
+            background-color: #fffc;
+            position: absolute;
+            right: 0;
+            top: 30px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Image Gallery</h1>
+    <button id="btn1">All Products</button>
+    <button id="btn2">Digital</button>
+    <button id="btn3">Food</button>
+    <hr>
+    <ul id="pics">
+        <li class="allPic digi"><img src="images/pic01.jpg" data-prc="350" data-desc="consec"></li>
+        <li class="allPic food"><img src="images/pic02.jpg" data-prc="652" data-desc="tetura"></li>
+        <li class="allPic digi"><img src="images/pic03.jpg" data-prc="259" data-desc="dipisi"></li>
+        <li class="allPic digi"><img src="images/pic04.jpg" data-prc="105" data-desc="cingel"></li>
+        <li class="allPic food"><img src="images/pic05.jpg" data-prc="980" data-desc="iteius"></li>
+        <li class="allPic food"><img src="images/pic06.jpg" data-prc="421" data-desc="necess"></li>
+        <li class="allPic digi"><img src="images/pic07.jpg" data-prc="328" data-desc="itatib"></li>
+        <li class="allPic food"><img src="images/pic08.jpg" data-prc="770" data-desc="usobca"></li>
+        <li class="allPic digi"><img src="images/pic09.jpg" data-prc="307" data-desc="ecatir"></li>
+        <li class="allPic digi"><img src="images/pic10.jpg" data-prc="465" data-desc="erumqu"></li>
+        <li class="allPic digi"><img src="images/pic11.jpg" data-prc="550" data-desc="iafugi"></li>
+        <li class="allPic digi"><img src="images/pic12.jpg" data-prc="297" data-desc="veniam"></li>
+
+    </ul>
+    <div id="picBox">
+        <img src="images/spacer.png">
+        <div id="picInfo"></div>
+    </div>
+    <script>
+        function changePic(newPic) {
+            document.querySelector('#picBox img').src = newPic;
+        }
+
+        function showPics(cls) {
+            myPics = document.querySelectorAll(cls);
+            for (let i = 0; i < myPics.length; i++) {
+                myPics[i].style.display = 'inline-block';
+            }
+        }
+
+        function hidePics() {
+            myPics = document.querySelectorAll('#pics li');
+            for (let i = 0; i < myPics.length; i++) {
+                myPics[i].style.display = 'none';
+            }
+        }
+
+        document.querySelector('#btn1').addEventListener('click', function() {
+            hidePics();
+            showPics('.allPic')
+        });
+        document.querySelector('#btn2').addEventListener('click', function() {
+            hidePics();
+            showPics('.digi')
+        });
+        document.querySelector('#btn3').addEventListener('click', function() {
+            hidePics();
+            showPics('.food')
+        });
+
+        imgs = document.querySelectorAll('#pics img');
+        for (let i = 0; i < imgs.length; i++) {
+            let n;
+            (i >= 9) ? n = (i + 1): n = '0' + (i + 1);
+            imgs[i].addEventListener('click', function() {
+                document.querySelector('#picBox img').setAttribute('src', this.src);
+                document.querySelector('#picInfo').innerHTML = this.getAttribute('data-desc') + "<br>$ " + this.getAttribute('data-prc');
+            });
+        }
+    </script>
+</body>
+
+</html>

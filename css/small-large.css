@@ -1,0 +1,16 @@
+#button{padding: 5px 20px;border:2px;}
+#pics{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(194, 194, 245);
+    text-align: center;
+    overflow: auto;
+    padding: 5px;
+}
+#pics li{list-style-type:none;float:left;margin:5x;width:100px;height: 100px;overflow: hidden;border-radius: 10px;position: relative;}
+#pics li img{width: 100%;height: 100%;}
+#pics li span{position:absolute;left:0;top:0;display:block;width: 400px;height: 100px;text-align:center;cursor: pointer;color: chartreuse;font-weight: bold;font-size: 3cm;line-height: 100px;}
+
+    #picbox{ width: 600px;height: 450px; border: 2px dotted green;position: absolute; right: 10px;}
+    #picbox img{ width: 100%;height: 100%;}
+

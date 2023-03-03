@@ -1,0 +1,12 @@
+
+    *{margin: 0;padding: 0;box-sizing: border-box; font-family: calibri;}
+    #acco{
+      width: 500px; border: 2px dotted red; padding: 10px; border-radius: 10px;
+      margin: 10px auto;
+    }
+    #acco h3{ background-color: #136238; color: #fff; padding: 5px; border-radius: 3px;margin-bottom: 2px; transition: all 0.5s;}
+    #acco h3:before{ content: " + ";}
+    #acco h3.active:before{ content: " - ";}
+    #acco h3:hover{ cursor: pointer;background-color: #074926; padding-left: 10px; letter-spacing: 1px; }
+    #acco p{ padding: 10px; background-color: #f7f7b4;}
+ 

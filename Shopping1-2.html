@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/Shopping1-2.css">
+        <link rel="stylesheet" href="css/fontawesome.min.css">
+        <link rel="stylesheet" href="css/fontawesome.css">
+        <link rel="stylesheet" href="css/solid.css">
+        
+
+
+<style>
+.fullcenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    background-color: rgb(53, 119, 180);
+    height: 10vh;
+}
+
+main{position: relative;
+    background-color: rgb(235, 227, 227);
+    min-height: 60vh;
+}
+
+/* .main .tg{
+    padding-bottom:50px;
+    position:absolute; 
+    right:10px; 
+    bottom:10px;
+    } */
+
+footer{
+    height: 10vh;
+    background-color: rgb(97, 193, 248);
+    color:azure;
+    text-align: center;
+    line-height: 10vh;
+    font-weight: bold;
+}
+
+lable{display:block; padding: 5px;}
+input,select{padding: 5px;}
+.sum{position: absolute;
+    width: 80px;
+    background-color: rgb(236, 223, 103); 
+    border-radius: 5px;
+    padding: 5px;
+    right: 10px;
+    bottom: 10px;
+    text-align: center;}
+
+#targ .section{ 
+    background-color: rgb(253, 131, 74);
+    position: relative;
+    padding: 5px;
+    margin: 3px;}
+#targ section .fa-close{ 
+    position: absolute; 
+    color: rgb(255, 0, 0); 
+    right: 10px; 
+    padding-top: 9px; 
+    text-decoration: wavy;
+    opacity: 0.4;}
+#targ section .fa-close:hover{ 
+    position: absolute; 
+    color: rgb(235, 93, 93); 
+    right: 10px;
+    opacity: 1;
+    cursor: pointer;}
+
+    .btn{position: absolute;
+    width: 100px;
+    min-height: 40px;
+    max-height: 50px;
+    background-color: rgb(236, 223, 103); 
+    border-radius: 10px;
+    border-bottom: 4px;
+    border-color: rgb(184, 181, 180);
+    padding:0px 2px;
+    left:10px;
+    top: 10px;
+    text-align:center;
+    display: flex ;
+    cursor: pointer;
+    box-shadow: 10px;}
+
+    .btn :hover{
+        color: rgb(26, 22, 241);
+        text-align: right;
+        
+    }
+
+    .btn .h3{
+        /* display: flex;
+        padding: 1px; */
+        text-align:right;
+        margin-top: 0px;
+    }
+</style>
+
+
+<script>
+    items=["Mobile","LED","Camera","LCD","Tablet","Laptop","Mic","PC","Mouse"]
+    window.addEventListener("DOMContentLoaded",function(){
+        //Component Creating
+        let header = document.createElement("header")
+        let main = document.createElement("main")
+        let footer = document.createElement("footer")
+        let tg = document.createElement("div")
+        let sum = document.createElement("div")
+        let sec = document.createElement("section")
+        const btn = document.createElement("botton")
+
+        //Component Setting
+        sec.innerHTML = "<span>Section Text</span><i class=\'fa fa-close fa-lg\'></i>"
+        tg.setAttribute("id","targ")
+        sum.setAttribute("id","total")
+        sum.innerText = "0"
+        sum.classList.add("sum")
+        btn.innerHTML="<h3>Add Items</h3>"
+        btn.classList.add("btn")
+         // other method for text
+         // tg.textContent = "New Text in this DIV"
+        // tg.innerText = "New Text in this DIV"
+        // other method for text
+        // main.style.position = "relative"
+        // main.style.minHeight = "40vh"
+        tg.setAttribute("style","padding-bottom:50px; position:absolute; right:10px; bottom:10px;")
+
+        //Component Adding
+        tg.append(sum)
+        tg.innerHTML += "<h2>New Text in this DIV</h2>"
+        tg.append(sec)
+        // tg.append(sec.cloneNode(true))
+        // tg.append(sec.cloneNode(true))
+        // tg.append(sec.cloneNode(true))
+        // tg.append(sec.cloneNode(true))
+        
+        main.append(tg)
+        main.append(btn)
+        document.body.append(header)
+        document.body.append(main)
+        document.body.append(footer)
+
+        //Component Events Handeling
+
+        btn.addEventListener("click",function(){
+            fi = sec.cloneNode(true);
+            fi.children[0].innerText = items[0]
+            tg.append(fi)
+            btn.addEventListener("click", function(){
+               ln = document.querySelectorAll("#targ section").length
+               if(ln>0 && ln<items.length){
+                 ni = sec.cloneNode(true);
+                 ni.children[0].innerText = items[ln]
+                 tg.append(ni)
+               }
+
+            })
+
+         document.querySelector("#targ").addEventListener("click",function(e){
+            if(e.srcElement.tagName == "I"){
+                e.srcElement.parentElement.remove()
+            }
+         })   
+           
+            // ni.children[0].innerText=items[2];
+             
+        })
+
+    })
+</script>
+    </head>
+    <body>
+
+        <script src="js/MyFunction.js"></script>
+        <script src="js/Shopping1-2.js"></script>
+    </body>
+</html>

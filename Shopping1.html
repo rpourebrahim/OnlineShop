@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/Shopping1.css">
+        <link rel="stylesheet" href="css/fontawesome.min.css">
+        <link rel="stylesheet" href="css/fontawesome.css">
+        <link rel="stylesheet" href="css/solid.css">
+        
+
+
+        <style>
+.fullcenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+headershopping{
+    height: 10vh;
+}
+
+main{position: relative;
+    background-color: rgb(235, 227, 227);
+    height: 100vh;
+}
+
+/* main .targ{color:rgb(236, 49, 49);
+     position:absolute; 
+     right: 10px; 
+     top: 10px;
+    min-height: 10vh;}
+#main .cart{
+    background-color:rgb(149, 236, 49); 
+    position:absolute; 
+    right: 10px; 
+    bottom: 10px;
+    width:px ;
+    min-height:300px;
+} */
+lable{display:block; padding: 5px;}
+input,select{padding: 5px;}
+
+
+        </style>
+
+    </head>
+    <body>
+
+        <header class="fullcenter"><h1>Shopping Page1</h1></header>
+        <main>
+            <div id="targ" ><h3>Products</h3></div>
+            <div id="cart"><h3>Shopping Box</h3>
+            <div id="total"><h3>0</h3></div>
+        </div>
+
+            <form action="" method="Get" id="regForm">
+
+        <label> Product:
+          <select name="prods" id="prods">
+
+            <option>------Selected a Model------</option>
+
+            <optgroup label="Samsung">
+             <option 
+             data-price="890" 
+             data-title="New Mobile Model" 
+             data-description="Galaxy S20 FE SM-G780" 
+             data-pic="/pics/Products/mobile/Samsung/Galaxy S20 FE SM-G780.jpg">
+             Sumsung Note20
+            </option>
+             <option 
+             data-price="612" 
+             data-title="New Mobile Model1" 
+             data-description="Galaxy A52s 5G SM" 
+             data-pic="pics/Products/mobile/Samsung/Galaxy A52s 5G SM.jpg">
+             Sumsung A52 s
+            </option>
+             <option data-price="920" 
+             data-title="New Mobile Model2" 
+             data-description="Galaxy s22 ultra" 
+             data-pic="pics/Products/mobile/Samsung/galaxy s22 ultra.jpg">
+             Galaxy S22 Ultra 5G
+            </option>
+             <option 
+             data-price="795" 
+             data-title="New Mobile Model3" 
+             data-description="Galaxy s22 5G" 
+             data-pic="pics/Products/mobile/Samsung/Galaxy s22 5G.jpg">
+             Sumsung Galaxy S22 5G
+            </option>
+             <option 
+             data-price="830" 
+             data-title="New Mobile Model4" 
+             data-description="GALAXY A53 5G" 
+             data-pic="pics/Products/mobile/Samsung/GALAXY A53 5G.jpg">
+             GALAXY A53 5G
+            </option>
+            </optgroup>
+            <optgroup label="Apple">
+             <option 
+             data-price="890" 
+             data-title="New Mobile Model" 
+             data-description="IPhone 6s Plus" 
+             data-pic="pics/Products/mobile/Apple/iPhone 6s Plus.jpg">
+             iPhone 6s Plus
+            </option>
+             <option 
+             data-price="612" 
+             data-title="New Mobile Model1" 
+             data-description="IPhone 11" 
+             data-pic="pics/Products/mobile/Apple/iPhone 11.jpg">
+             iPhone 11
+            </option>
+             <option 
+             data-price="920" 
+             data-title="New Mobile Model2" 
+             data-description="IPhone 12 A2404" 
+             data-pic="pics/Products/mobile/Apple/iPhone 12 A2404.jpg">
+             iPhone 12 A2404
+            </option>
+             <option 
+             data-price="795" 
+             data-title="New Mobile Model3" 
+             data-description="IPhone 13 CH" 
+             data-pic="pics/Products/mobile/Apple/iPhone 13 CH.jpg">
+             iPhone 13 CH
+            </option>
+             <option 
+             data-price="830" 
+             data-title="New Mobile Model4" 
+             data-description="IPhone XS Max" 
+             data-pic="pics/Products/mobile/Apple/iPhone XS Max.jpg">
+             iPhone XS Max
+            </option>
+            </optgroup>
+            <optgroup label="Xiaomi">
+             <option 
+             data-price="890" 
+             data-title="New Mobile Model" 
+             data-description="Xiaomi Mi 11 Ultra" 
+             data-pic="pics/Products/mobile/Xiaomi/Mi 11 Ultra.jpg">
+             Mi 11 Ultra
+            </option>
+             <option 
+             data-price="612" 
+             data-title="New Mobile Model1" 
+             data-description="Xiaomi POCO M3 PRO 5G" 
+             data-pic="pics/Products/mobile/Xiaomi/POCO M3 PRO 5G.jpg">
+             POCO M3 PRO 5G
+            </option>
+             <option 
+             data-price="920" 
+             data-title="New Mobile Model2" 
+             data-description="Xiaomi Redmi Note 11 pro" 
+             data-pic="pics/Products/mobile/Xiaomi/Redmi Note 11 pro.jpg">
+             Redmi Note 11 pro
+            </option>
+             <option 
+             data-price="795" 
+             data-title="New Mobile Model3" 
+             data-description="Xiaomi Redmi Note 11" 
+             data-pic="pics/Products/mobile/Xiaomi/Redmi Note 11.jpg">
+             Redmi Note 11
+            </option>
+            </optgroup>
+          </select>
+        </label>
+    
+</form>
+
+</main>
+        <script src="js/MyFunction.js"></script>
+        <script src="js/Shopping1.js"></script>
+    </body>
+</html>

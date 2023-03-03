@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery 05 - Accordion 2</title>
+  <link rel="icon" href="data:;base64,=">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- <style>
+    *{margin: 0;padding: 0;box-sizing: border-box; font-family: calibri;}
+    #acco{
+      width: 500px; border: 2px dotted red; padding: 10px; border-radius: 10px;
+      margin: 10px auto;
+    }
+    #acco h3{ background-color: #136238; color: #fff; padding: 5px; border-radius: 3px;margin-bottom: 2px; transition: all 0.5s;}
+    #acco h3:before{ content: " + ";}
+    #acco h3.active:before{ content: " - ";}
+    #acco h3:hover{ cursor: pointer;background-color: #074926; padding-left: 10px; letter-spacing: 1px; }
+    #acco p{ padding: 10px; background-color: #f7f7b4;}
+  </style> -->
+  <script src="js/jquery-1.12.4.js"></script>
+  <script src="js/acc.js"></script>
+  <!-- <script>
+    $(document).ready(function(){
+      $('#acco').find('p').slideUp(1);
+      $('#acco').find('h3').click(function(){
+        if($(this).hasClass('active')){
+          $(this).next().slideUp(200);
+          $(this).removeClass('active');
+        }else{
+          $('#acco').find('h3').removeClass('active');
+          $('#acco').find('p').slideUp(200);
+          $(this).next().slideDown(400);
+          $(this).addClass('active');
+        }
+      })
+    });
+  </script> -->
+</head>
+<body>
+  <h1>Accordion List</h1>
+  <div id="acco">
+    <h3>Molestias hic sed</h3>
+    <p>Rerum maxime iusto libero, deserunt sit unde laudantium corrupti, temporibus nobis magni at aspernatur autem modi natus quisquam? Suscipit vero corporis doloribus aliquam fugiat ea veritatis neque natus rem magni consequatur amet, nemo quasi! Maxime.</p>
+    <h3>Lorem ipsum dolor</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quidem, aliquid velit quas iusto ducimus veniam sanemo accusantium architecto illo odio corrupti quis quisquam, in quia? Porro et voluptas consequunturepe iste possimus esse voluptas molestiae, repellendus quasi alias quos tempore ut mollitia perspiciatis atque perferendis. Quibusdam, aliquam aliquid!</p>
+    <h3>Explicab pariatur repellat</h3>
+    <p>Dolorem dolores at, eum ut excepturi delectus nobis voluptatem tempore quod beatae eveniet, quasi deserunt  architecto harum labore officiis alias commodi.</p>
+    <h3>Eveniet nulla remark</h3>
+    <p>Excepturi doloremque soluta a delectus iste, eaque repellendus voluptatibus perspiciatis recusandae non, esse mag pariatur, eveniet cum ex et unde architecto.</p>
+    <h3>Eaque harum delectus</h3>
+    <p>Iusto praesentium autem totam error dignissimos maiores ipsum aperiam corporis, magni delectus ipsa dolorum ni eligendi ab? Earum nihil sed dolorem architecto eligendi. Sit laborum libero officia hic consecteturdebitis, tempora dicta voluptatum accusantium aliquid non? Distinctio temporibus sapiente cumque ipsum eaque maiores, praesentium vel minima reprehenderit? Facilis, voluptas perspiciatis.</p>
+    <h3>Beatae ducimus quam</h3>
+    <p>Modi odio debitis eveniet magni sit vel aliquam quibusdam quaerat quo, id hic harum. Voluptate optio, ipsa a corpuam, adipisci nulla recusandae vel distinctio iusto, delectus consequuntur ipsa voluptas excepturi perspiciatoris itaque accusantium et nisi temporibus. Alias nihil quisquam vitae odio numquam facilis officiis inventore explicabo minima!</p>
+    <h3>Laboriosa exertionem unde</h3>
+    <p>Quisqis ex officiis est tempore sint animi, at saepe nisi ullam consectetur qui. Aperiam id odio sapiente dolores optio accusamus aliquid vero ut.</p>
+  </div>
+</body>
+</html>

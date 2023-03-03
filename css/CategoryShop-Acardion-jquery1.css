@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: calibri;
+}
+
+.fa {
+    font-family: FontAwesome;
+}
+
+.acco {
+    width: 300px;
+    background-color: rgb(238, 245, 255);
+    border: 1px dotted rgb(146, 187, 241);
+    padding: 10px;
+    border-radius: 3px;
+    margin: 3px auto;
+}
+
+.acco h3 {
+    background-color: slategrey;
+    color: aliceblue;
+    padding: 5px;
+    border-radius: 3px;
+    margin: 1px 2px 2px 1px;
+    transition: all 0.5s;
+}
+
+.acco h3:before {
+    content: " + ";
+    font-family: "fontAwsome";
+    padding-right: 10px;
+}
+.acco h3:hover {
+    cursor: pointer;
+    background-color: rgb(245, 236, 66);
+    /* color: rgb(255, 255, 255); */
+    padding-left: 3px;
+    letter-spacing: 1px;
+}
+
+.acco h3.active:before {
+    content: " - " /important;
+}
+    /* visibility: hidden; */
+    /* class: "fas fa-cloud";
+
+
+} 
+
+
+
+/* .acc h3.active2::before {
+   content: " + ";
+   font-family: "fontAwsome";
+   padding-right: 10px;
+} */
+    .acco p {
+        padding: 10px;
+        font-size: medium;
+        background-color: rgb(255, 255, 255);
+        /* color: rgb(138, 178, 224); */
+    }                                                                
